@@ -1,0 +1,100 @@
+<DOCTYPE! html>
+<head>
+	<title>Dates</title>
+<head>
+<body>
+	<center><h1>Dates</h1></center>
+
+	<p id="thisYear"></p>
+
+	<button type="button" onclick="year()">Year</button>
+
+	<p id="allTime"></p>
+
+	<p id="thisDate"></p>
+
+	<p id="thisDay"></p>
+
+	<p id="thisHour"></p>
+
+	<p id="thisMilSec"></p>
+
+	<p id="thisMin"></p>
+
+	<p id="thisMon"></p>
+
+	<p id="thisSec"></p>
+
+	<p id="thisTime"></p>
+
+	<p id="test"></p>
+
+	<p id="Don"></p>
+
+
+	<script>
+	//Learn how to work with dates
+
+	document.getElementById("allTime").innerHTML = Date()
+
+//There are spectial libraries you can access to get certain times. This one accesses year.
+//To put a date in a variable, you must put new infront of it. "new Date()"
+	var a = new Date().getFullYear()
+
+	function year () {
+		document.getElementById("thisYear").innerHTML = a;
+	}
+
+//displays day #
+	var b = new Date().getDate()
+		document.getElementById("thisDate").innerHTML = b;
+
+//displays day (0-6)
+	var c = new Date().getDay()
+		document.getElementById("thisDay").innerHTML = c;
+
+//displays millitary hours
+	var d = new Date().getHours()
+		document.getElementById("thisHour").innerHTML = d;
+
+//displays millisecond
+	var e = new Date().getMilliseconds()
+		document.getElementById("thisMilSec").innerHTML = e;
+
+//displays current minute 
+	var f = new Date().getMinutes()
+		document.getElementById("thisMin").innerHTML = f;
+
+//displays the month (0-11) counts each month like an array 
+	var g = new Date().getMonth()
+		document.getElementById("thisMon").innerHTML = g;
+
+//displays current second
+	var h = new Date().getSeconds()
+		document.getElementById("thisSec").innerHTML = h;
+
+//displays the time (milliseconds since January 1, 1970)
+	var i = new Date().getTime()
+		document.getElementById("thisTime").innerHTML = i;
+
+
+//practice with perameters
+	function per (a, b) {
+		return a*b;
+	}
+		document.getElementById("test").innerHTML = per(3, 4);
+
+
+//practice with conditionals
+	var person = "John";
+
+	if (person = "Don") {
+		document.getElementById("Don").innerHTML = "Hello Don!";
+	}
+
+	else {
+		document.getElementById("Don").innerHTML = "You are not Don";
+	}
+	</script>
+</body>
+</html>
